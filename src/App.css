@@ -1,0 +1,430 @@
+/* Navbar */
+* {
+  font-family: Inter;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  box-shadow: 0px 0px 8px 0px #2f7af91a;
+  /* backdrop-filter: blur(10px); */
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.navbar div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.navbar span,
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.link {
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+.link:hover {
+  cursor: pointer;
+}
+
+/* intro  */
+.intro {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding-block: 2rem;
+}
+.intro img {
+  width: 808px;
+  height: 550px;
+}
+.right-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* justify-content: center; */
+  align-items: right;
+  padding-left: 5rem;
+  padding-top: 2rem;
+}
+.right-intro h2 {
+  font-size: 3rem;
+}
+.se {
+  color: rgb(255, 180, 0);
+}
+.right-intro p {
+  color: rgba(118, 118, 118, 1);
+}
+
+.intro button {
+  width: 90px;
+  height: 35px;
+  background-color: rgb(255, 180, 0);
+
+  border-radius: 5px;
+  border-style: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Project-section */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgb(240, 240, 246);
+}
+.project-section p {
+  color: rgba(118, 118, 118, 1);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding-block: 2rem;
+}
+
+.project-tile {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 385px;
+  border-radius: 12px;
+  padding-bottom: 2rem;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.project-tile > div {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.tile-grid {
+  display: grid;
+  /* gap: 0.1em; */
+  gap: 1rem;
+  grid-template-columns: repeat(4, auto);
+  grid-auto-flow: dense;
+}
+.tiles {
+  background-color: rgb(239, 239, 239);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 0.4em;
+}
+
+/* review cards (recommendation section) */
+
+.comments-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+}
+.review-container {
+  overflow-x: scroll;
+  width: 100%;
+  padding-block: 2rem;
+}
+.reviewcard {
+  width: 340px;
+  height: 327.1px;
+  background-color: white;
+  padding: 1.3rem;
+  padding-inline: 3rem;
+}
+
+.flex-review {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: max-content;
+  gap: 1rem;
+}
+
+/* popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.popup-content {
+  background-color: white;
+  padding: 1rem;
+  width: 50%;
+}
+.popup-content input {
+  padding: 1em 2em;
+  outline: none;
+  appearance: none;
+  border-style: none;
+  background-color: rgb(240, 240, 246);
+}
+.skill-grid {
+  display: grid;
+  grid-template-columns: auto 80px;
+  gap: 1rem;
+}
+.skill-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.button-flex {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-top: 1rem;
+  gap: 1rem;
+  box-sizing: content-box;
+}
+.button-flex button {
+  width: 80px;
+  appearance: none;
+  outline: none;
+  border-style: none;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  padding-inline: 2em;
+  padding-block: 1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.button-flex button:nth-child(1) {
+  width: fit-content;
+  background-color: rgb(255, 180, 0);
+}
+.button-flex button:nth-child(1):hover {
+  background-color: rgb(182, 127, 0);
+}
+.button-flex button:nth-child(2) {
+  width: 80px;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+.button-flex button:nth-child(2):hover {
+  background-color: rgb(246, 246, 246);
+}
+.popup-content h1 {
+  text-align: center;
+}
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* skills page */
+
+.addskill {
+  width: 80px;
+  appearance: none;
+  outline: none;
+  border-style: none;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  padding-inline: 2em;
+  padding-block: 1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: rgb(255, 180, 0);
+}
+.addskill:hover {
+  background-color: rgb(165, 117, 2);
+}
+
+.skillcard {
+  background-color: white;
+  padding: 2rem;
+  width: 300px;
+}
+.skillcard span {
+  color: grey;
+}
+
+.label {
+  font-size: 20px;
+  color: green;
+}
+
+.skillcard > div span:nth-child(2) {
+  float: right;
+}
+.skillcard > div {
+  margin-block: 1rem;
+}
+
+/* contact section */
+.contact-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(240, 240, 246);
+  gap: 1rem;
+}
+.contact-flex div:nth-child(1) {
+  width: 55%;
+}
+
+.contact-flex form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.contact-flex label {
+  padding-top: 1rem;
+}
+.contact-flex input {
+  padding: 1em 2em;
+  outline: none;
+  appearance: none;
+  border-style: none;
+  background-color: rgb(240, 240, 246);
+}
+.contact-flex form input:nth-child(8) {
+  height: 5rem;
+}
+.contact-flex button {
+  width: 80px;
+  appearance: none;
+  outline: none;
+  border-style: none;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  padding-inline: 2em;
+  padding-block: 1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: fit-content;
+  background-color: rgb(255, 180, 0);
+  margin-top: 2rem;
+}
+.contact-flex button:hover {
+  background-color: rgb(165, 117, 2);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  width: 40;
+  gap: 1rem;
+}
+.contact-info h2 {
+  margin-block: 0.1rem;
+}
+.contact-info div > span:nth-child(2) {
+  color: grey;
+}
+.image-section {
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28.5px;
+  width: 28.5px;
+  /* background-color: yellow; */
+}
+.image-section i {
+  background-color: rgb(255, 180, 0);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+}
+
+.contact-card {
+  background-color: white;
+  padding-inline: 1rem;
+  width: 100%;
+  padding-bottom: 0.23rem;
+}
+
+.contact-card div {
+  padding-top: 1rem;
+}
+.info-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* footer */
+.footer-logo {
+  background-color: rgb(240, 240, 246);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.footer-flex {
+  margin-top: 1rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+}
+.footer-logo img {
+  background-color: rgb(240, 240, 246);
+  padding-block: 2rem;
+  width: 140px;
+}
+.footer-link-conatiner {
+  padding-top: 1rem;
+  max-width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.intro-button:hover {
+  background-color: rgb(165, 117, 2);
+}
+/* Moblie */
+@media screen and (max-width: 600px) {
+  /* navbar */
+  .navbar div .dec {
+    display: none;
+  }
+  .navbar img {
+    width: 75px;
+    height: 35px;
+  }
+  .right-intro {
+    padding-left: 3rem;
+  }
+  .intro img {
+    display: none;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
